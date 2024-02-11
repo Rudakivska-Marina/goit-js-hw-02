@@ -1,12 +1,12 @@
 function checkForSpam(message) {
-    const banWord1  = `spam`;
-    const banWord2 = `sale`;
-    const check1 = message.toLowerCase().includes(banWord1);
-    const check2 = message.toLowerCase().includes(banWord2);
+    const spamWord  = `spam`;
+    const saleWord = `sale`;
+    const messageLower = message.toLowerCase();
+    const check1 = messageLower.includes(spamWord);
+    const check2 = messageLower.includes(saleWord);
     const hasBanWords = check1 || check2;
-    console.log(hasBanWords)
     
-    return message;
+    return hasBanWords;
 }
 
 console.log(checkForSpam("Latest technology news")); // false
